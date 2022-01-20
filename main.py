@@ -15,11 +15,12 @@ if __name__ == "__main__":
 
 
     copo = Copo(300)
-    print(copo)
+    print("%.1f" % copo.conteudo)
 
     copo.encher('café')
     print(copo.bebida)
     print(copo.__str__())
+    print(copo.conteudo)
 
     copo.beber(30)
     print(copo.__str__())

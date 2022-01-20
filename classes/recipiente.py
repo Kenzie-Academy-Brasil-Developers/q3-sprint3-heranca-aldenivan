@@ -1,7 +1,7 @@
 class Recipiente:
     
     def __init__(self, tamanho: float, conteudo: float = 0, limpo: bool = True):
-        self.tamanho = tamanho if tamanho > 0 else 0
+        self.tamanho = float("%.1f" % tamanho) if tamanho > 0 else 0
         self.conteudo = conteudo if conteudo <= tamanho else 0
         self.limpo = limpo if conteudo == 0 else False
 

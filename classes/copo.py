@@ -6,7 +6,7 @@ class Copo(Recipiente):
         super().__init__(tamanho)
         self.bebida = bebida
 
-    def encher(self, bebida: str):
+    def encher(self, bebida: str = "água"):
         
         if self.limpo:
             self.sujar()
@@ -14,15 +14,15 @@ class Copo(Recipiente):
             self.bebida = bebida
 
         else:
-            return "Não pode se encher um copo sujo!"    
+            return "Não se pode encher um copo sujo"    
     
     def beber(self, quantidade: float):
         
         if quantidade < 0:
-            return "Quantidade deve ser positiva!"
+            return "Quantidade deve ser positiva"
 
         elif quantidade > self.tamanho:
-            return "Não há quantidade suficiente no copo"
+            return "Não há bebida suficiente no copo"
 
         else:        
             self.conteudo = self.tamanho - quantidade
